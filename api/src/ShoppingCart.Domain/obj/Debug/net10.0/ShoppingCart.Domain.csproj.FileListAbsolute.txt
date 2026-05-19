@@ -1,0 +1,12 @@
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Domain/bin/Debug/net10.0/ShoppingCart.Domain.deps.json
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Domain/bin/Debug/net10.0/ShoppingCart.Domain.dll
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Domain/bin/Debug/net10.0/ShoppingCart.Domain.pdb
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Domain/obj/Debug/net10.0/ShoppingCart.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Domain/obj/Debug/net10.0/ShoppingCart.Domain.AssemblyInfoInputs.cache
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Domain/obj/Debug/net10.0/ShoppingCart.Domain.AssemblyInfo.cs
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Domain/obj/Debug/net10.0/ShoppingCart.Domain.csproj.CoreCompileInputs.cache
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Domain/obj/Debug/net10.0/ShoppingCart.Domain.sourcelink.json
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Domain/obj/Debug/net10.0/ShoppingCart.Domain.dll
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Domain/obj/Debug/net10.0/refint/ShoppingCart.Domain.dll
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Domain/obj/Debug/net10.0/ShoppingCart.Domain.pdb
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Domain/obj/Debug/net10.0/ref/ShoppingCart.Domain.dll

@@ -1,0 +1,36 @@
+using ShoppingCart.Application;
+using ShoppingCart.Infrastructure;
+using ShoppingCart.Presentation.Middleware;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+builder.Services.AddOpenApi();
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("ClientApp", policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:4200")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
+var app = builder.Build();
+
+app.UseMiddleware<ErrorHandlingMiddleware>();
+app.UseMiddleware<RequestValidationMiddleware>();
+app.UseCors("ClientApp");
+
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+}
+
+app.MapControllers();
+
+app.Run();
