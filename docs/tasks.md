@@ -3,11 +3,7 @@
 Governance: Engineering rules and contribution standards are maintained in [../.github/rules.md](../.github/rules.md).
 
 ## Feature Workflow
-- Start each feature on a new branch created from `master`.
-- Use one dedicated branch per feature.
-- Name feature branches using `feature/<number>-<short-name>`.
-- Example: `feature/1-product-catalog`.
-- After finishing a feature, open a pull request back into `master`.
+Follow the Git and collaboration workflow in [../.github/rules.md](../.github/rules.md).
 
 ## Backlog
 
