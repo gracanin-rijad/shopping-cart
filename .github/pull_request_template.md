@@ -9,6 +9,8 @@ Describe what this PR changes and why.
 - [ ] test
 - [ ] chore
 
+Use the same type prefix in your commit messages, for example: `feat: add cart item update flow`
+
 ## Checklist
 - [ ] I linked relevant issue(s)
 - [ ] I added or updated tests where needed

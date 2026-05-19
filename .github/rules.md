@@ -26,13 +26,19 @@
 - Use proper HTTP status codes
 
 ## Git & Collaboration
-- Never push directly to main
-- Use feature branches named `feature/<short-description>`
-- Use fix branches named `fix/<short-description>`
-- One feature = one commit
+- Never push directly to master
+- Start each feature on a new branch created from `master`
+- Use one dedicated branch per feature
+- Name feature branches using `feature/<number>-<short-name>`
+- Example: `feature/1-product-catalog`
+- Open a pull request back into `master` after finishing a feature
+- Use fix branches named `fix/<short-description>` for isolated bug fixes
+- Prefer one commit per completed task within a feature
 - Write meaningful commit messages in imperative form
+- Commit messages must use the same change types as the PR template
 - Recommended format: `<type>: <summary>`
-- Types: feat, fix, docs, refactor, test, chore
+- Allowed types: feat, fix, docs, refactor, test, chore
+- Example: `feat: add cart item update flow`
 
 ## Pull Requests
 - Keep PRs focused and small
