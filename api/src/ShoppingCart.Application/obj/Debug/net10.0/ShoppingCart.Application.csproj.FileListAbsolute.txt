@@ -1,0 +1,16 @@
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/obj/Debug/net10.0/ShoppingCart.Application.csproj.AssemblyReference.cache
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/obj/Debug/net10.0/ShoppingCart.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/obj/Debug/net10.0/ShoppingCart.Application.AssemblyInfoInputs.cache
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/obj/Debug/net10.0/ShoppingCart.Application.AssemblyInfo.cs
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/obj/Debug/net10.0/ShoppingCart.Application.csproj.CoreCompileInputs.cache
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/obj/Debug/net10.0/ShoppingCart.Application.sourcelink.json
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/bin/Debug/net10.0/ShoppingCart.Application.deps.json
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/bin/Debug/net10.0/ShoppingCart.Application.dll
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/bin/Debug/net10.0/ShoppingCart.Application.pdb
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/bin/Debug/net10.0/ShoppingCart.Domain.dll
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/bin/Debug/net10.0/ShoppingCart.Domain.pdb
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/obj/Debug/net10.0/Shopping.D959DF90.Up2Date
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/obj/Debug/net10.0/ShoppingCart.Application.dll
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/obj/Debug/net10.0/refint/ShoppingCart.Application.dll
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/obj/Debug/net10.0/ShoppingCart.Application.pdb
+/Users/rijadgracanin/Desktop/shopping-cart/api/src/ShoppingCart.Application/obj/Debug/net10.0/ref/ShoppingCart.Application.dll

@@ -12,12 +12,12 @@ Governance: Engineering rules and contribution standards are maintained in [../.
 ## Backlog
 
 ### Feature 0 - Foundation Setup
-- [ ] Scaffold Angular project in client/
-- [ ] Scaffold .NET Core project in api/
-- [ ] Setup clean architecture projects in api (Domain/Application/Infrastructure/Presentation)
-- [ ] Configure CORS on backend
-- [ ] Setup in-memory database
-- [ ] Add global validation and error handling middleware
+- [x] Scaffold Angular project in client/
+- [x] Scaffold .NET Core project in api/
+- [x] Setup clean architecture projects in api (Domain/Application/Infrastructure/Presentation)
+- [x] Configure CORS on backend
+- [x] Setup in-memory database
+- [x] Add global validation and error handling middleware
 
 ### Feature 1 - Product Catalog (Hardcoded)
 - [ ] Backend: create Product entity and Product DTO
@@ -63,3 +63,4 @@ Governance: Engineering rules and contribution standards are maintained in [../.
 ---
 
 ## Done
+- Feature 0 - Foundation Setup
