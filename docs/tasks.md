@@ -16,12 +16,12 @@ Follow the Git and collaboration workflow in [../.github/rules.md](../.github/ru
 - [x] Add global validation and error handling middleware
 
 ### Feature 1 - Product Catalog (Hardcoded)
-- [ ] Backend: create Product entity and Product DTO
-- [ ] Backend: create hardcoded Product list/service in Application layer
-- [ ] Frontend: create Product model/interface
-- [ ] Frontend: build Product List page using hardcoded products
-- [ ] Frontend: build Product Detail page
-- [ ] Frontend: add product list/detail styling
+- [x] Backend: create Product entity and Product DTO
+- [x] Backend: create hardcoded Product list/service in Application layer
+- [x] Frontend: create Product model/interface
+- [x] Frontend: build Product List page using hardcoded products
+- [x] Frontend: build Product Detail page
+- [x] Frontend: add product list/detail styling
 
 ### Feature 2 - Cart Management
 - [ ] Backend: create CartItem entity and cart repository interface

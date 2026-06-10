@@ -1,0 +1,38 @@
+<div class="product-list-container">
+  <h1>Products</h1>
+
+  <div *ngIf="loading" class="loading">
+    <p>Loading products...</p>
+  </div>
+  <div *ngIf="error" class="error">
+    <p>{{ error }}</p>
+  </div>
+  
+{{loading}}
+
+  <div *ngIf="!loading && !error" class="product-grid">
+    <div *ngFor="let product of products" class="product-card">
+      <div class="product-image">
+        <img *ngIf="product.imageUrl" [src]="product.imageUrl" [alt]="product.name">
+      </div>
+      <div class="product-content">
+        <h2>{{ product.name }}</h2>
+        <p class="description" *ngIf="product.description">{{ product.description }}</p>
+        <div class="product-footer">
+          <span class="price">${{ product.price.toFixed(2) }}</span>
+          <span class="stock" [class.low-stock]="product.stockQuantity < 10">
+            Stock: {{ product.stockQuantity }}
+          </span>
+        </div>
+        <div class="actions">
+          <a [routerLink]="['/products', product.id]" class="btn btn-primary">View Details</a>
+          <button class="btn btn-secondary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!loading && !error && products.length === 0" class="empty-state">
+    <p>No products available</p>
+  </div>
+</div>
