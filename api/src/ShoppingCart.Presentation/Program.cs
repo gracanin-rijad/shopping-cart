@@ -1,10 +1,16 @@
 using ShoppingCart.Application;
 using ShoppingCart.Infrastructure;
 using ShoppingCart.Presentation.Middleware;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+    });
 builder.Services.AddOpenApi();
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure();

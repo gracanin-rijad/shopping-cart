@@ -1,0 +1,71 @@
+<div class="product-detail-container">
+  <a routerLink="/products" class="back-link">← Back to Products</a>
+
+  <div *ngIf="loading" class="loading">
+    <p>Loading product...</p>
+  </div>
+
+  <div *ngIf="error" class="error">
+    <p>{{ error }}</p>
+  </div>
+
+  <div *ngIf="!loading && !error && product" class="product-detail">
+    <div class="product-image">
+      <img *ngIf="product.imageUrl" [src]="product.imageUrl" [alt]="product.name">
+      <div *ngIf="!product.imageUrl" class="placeholder">No image available</div>
+    </div>
+
+    <div class="product-info">
+      <h1>{{ product.name }}</h1>
+
+      <div class="price-stock">
+        <span class="price">${{ product.price.toFixed(2) }}</span>
+        <span class="stock" [class.low-stock]="product.stockQuantity < 10">
+          {{ product.stockQuantity }} in stock
+        </span>
+      </div>
+
+      <p class="description" *ngIf="product.description">
+        {{ product.description }}
+      </p>
+
+      <div class="quantity-selector">
+        <label for="quantity">Quantity:</label>
+        <div class="quantity-controls">
+          <button (click)="decrementQuantity()" class="btn-qty">−</button>
+          <input
+            type="number"
+            id="quantity"
+            [(ngModel)]="quantity"
+            min="1"
+            [max]="product.stockQuantity"
+            readonly
+            class="quantity-input"
+          >
+          <button (click)="incrementQuantity()" class="btn-qty">+</button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button (click)="addToCart()" class="btn btn-primary btn-large" [disabled]="product.stockQuantity === 0">
+          Add to Cart
+        </button>
+        <button class="btn btn-secondary btn-large">
+          Add to Wishlist
+        </button>
+      </div>
+
+      <div class="product-specs">
+        <h3>Product Details</h3>
+        <dl>
+          <dt>SKU:</dt>
+          <dd>PROD-{{ product.id }}</dd>
+          <dt>Stock:</dt>
+          <dd>{{ product.stockQuantity }} units available</dd>
+          <dt>Price:</dt>
+          <dd>${{ product.price.toFixed(2) }}</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
