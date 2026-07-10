@@ -24,10 +24,16 @@
         </div>
         <div class="actions">
           <a [routerLink]="['/products', product.id]" class="btn btn-primary">View Details</a>
-          <button class="btn btn-secondary">Add to Cart</button>
+          <button class="btn btn-secondary" (click)="addToCart(product)" [disabled]="product.stockQuantity === 0">
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
+  </div>
+
+  <div *ngIf="isToastVisible && toastMessage" class="toast">
+    {{ toastMessage }}
   </div>
 
   <div *ngIf="!loading && !error && products.length === 0" class="empty-state">

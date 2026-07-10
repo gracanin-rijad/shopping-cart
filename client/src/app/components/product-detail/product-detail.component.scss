@@ -51,7 +51,6 @@
 }
 
 .product-image {
-  background: #f0f0f0;
   border-radius: 8px;
   overflow: hidden;
 
@@ -210,6 +209,20 @@
       font-weight: 500;
     }
   }
+}
+
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 999;
+  background: rgba(30, 41, 59, 0.95);
+  color: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: 999px;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.25);
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .product-specs {

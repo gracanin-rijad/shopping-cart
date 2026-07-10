@@ -1,5 +1,5 @@
 <div class="product-detail-container">
-  <a routerLink="/products" class="back-link">← Back to Products</a>
+  <a routerLink="/products" class="btn btn-secondary back-link">Browse Products</a>
 
   <div *ngIf="loading" class="loading">
     <p>Loading product...</p>
@@ -53,6 +53,10 @@
         <button class="btn btn-secondary btn-large">
           Add to Wishlist
         </button>
+      </div>
+
+      <div class="toast" *ngIf="isToastVisible && toastMessage">
+        {{ toastMessage }}
       </div>
 
       <div class="product-specs">

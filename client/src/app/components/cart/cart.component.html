@@ -1,0 +1,80 @@
+<div class="cart-container">
+  <div class="cart-header">
+    <div>
+      <h1>Your Cart</h1>
+      <p class="cart-subtitle">Review items or continue shopping.</p>
+    </div>
+    <a routerLink="/products" class="btn btn-secondary back-button">Browse Products</a>
+  </div>
+
+  <div *ngIf="loading" class="loading">
+    <p>Loading cart...</p>
+  </div>
+
+  <div *ngIf="error" class="error">
+    <p>{{ error }}</p>
+  </div>
+
+  <div *ngIf="!loading && !error && cart" class="cart-content">
+    <div *ngIf="cart.items.length > 0" class="cart-items">
+      <div *ngFor="let item of cart.items" class="cart-item">
+        <div class="item-card">
+          <a [routerLink]="['/products', item.productId]" class="item-image-link">
+            <div class="item-image">
+              <img *ngIf="item.imageUrl" [src]="item.imageUrl" [alt]="item.productName" />
+              <div *ngIf="!item.imageUrl" class="item-image-placeholder">No image available</div>
+            </div>
+          </a>
+
+          <div class="item-info">
+            <div class="item-header">
+              <h2>
+                <a [routerLink]="['/products', item.productId]" class="item-link">
+                  {{ item.productName }}
+                </a>
+              </h2>
+
+              <div class="item-prices">
+                <span class="item-price">${{ item.price.toFixed(2) }}</span>
+                <span class="item-total">Subtotal: ${{ item.totalPrice.toFixed(2) }}</span>
+              </div>
+            </div>
+
+            <p class="item-description">
+              You have {{ item.quantity }} in your cart. Adjust quantity or remove the product.
+            </p>
+
+            <div class="item-actions">
+              <div class="quantity-controls">
+                <button class="btn-qty" (click)="updateQuantity(item, -1)">−</button>
+                <span>{{ item.quantity }}</span>
+                <button class="btn-qty" (click)="updateQuantity(item, 1)">+</button>
+              </div>
+              <button class="btn btn-secondary remove-button" (click)="removeItem(item.id)">
+                Remove
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-summary">
+        <div class="summary-card">
+          <h3>Order Summary</h3>
+          <div class="summary-row">
+            <span>Items</span>
+            <span>{{ cart.totalItems }}</span>
+          </div>
+          <div class="summary-row total">
+            <span>Subtotal</span>
+            <span>${{ cart.totalPrice.toFixed(2) }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="cart.items.length === 0" class="empty-state">
+      <p>Your cart is empty.</p>
+    </div>
+  </div>
+</div>

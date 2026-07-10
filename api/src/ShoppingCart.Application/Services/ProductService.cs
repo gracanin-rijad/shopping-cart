@@ -11,7 +11,7 @@ public class ProductService : IProductService
             Description = "High-quality wireless headphones with noise cancellation",
             Price = 79.99m,
             StockQuantity = 50,
-            ImageUrl = "https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=400&q=80"
+            ImageUrl = "https://myhypergear.com/cdn/shop/products/15613_HYG_Vibe_Wireless_Headphones_White_001.jpg?v=1644943914"
         },
         new ProductDto
         {
@@ -20,7 +20,7 @@ public class ProductService : IProductService
             Description = "Durable 6ft USB-C charging and data cable",
             Price = 14.99m,
             StockQuantity = 200,
-            ImageUrl = "https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=400&q=80"
+            ImageUrl = "https://media.startech.com/cms/products/main/ucc-3m-10g-usb-cable.main.jpg"
         },
         new ProductDto
         {
@@ -29,7 +29,7 @@ public class ProductService : IProductService
             Description = "Protective phone case with shock absorption",
             Price = 24.99m,
             StockQuantity = 150,
-            ImageUrl = "https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=400&q=80"
+            ImageUrl = "https://harperandblake.co.uk/cdn/shop/files/i-Phone-15-Tough-Mag-Safe-Case---Front-View---Website-Cute-Sun---Yellow.jpg?v=1705578880"
         },
         new ProductDto
         {
@@ -38,7 +38,7 @@ public class ProductService : IProductService
             Description = "Tempered glass screen protector with easy installation",
             Price = 9.99m,
             StockQuantity = 300,
-            ImageUrl = "https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=400&q=80"
+            ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ64vmUH9AGJl1NjNPy8xDD6F4npE2FQ1wTkLRpHqsmCg&s=10"
         },
         new ProductDto
         {
@@ -47,7 +47,7 @@ public class ProductService : IProductService
             Description = "20000mAh portable power bank with fast charging",
             Price = 49.99m,
             StockQuantity = 75,
-            ImageUrl = "https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=400&q=80"
+            ImageUrl = "https://zyrontech.com.au/cdn/shop/files/powaflex-20000mah-power-bank-941913.jpg?v=1726767719&width=2048"
         }
     };
 
