@@ -18,13 +18,20 @@ body {
 }
 
 .app-header nav {
-  display: flex;
-  gap: 18px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
+  gap: 18px;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
 }
 
 .app-header nav a:last-child {
-  margin-left: auto;
+  justify-self: end;
 }
 
 .brand-link {

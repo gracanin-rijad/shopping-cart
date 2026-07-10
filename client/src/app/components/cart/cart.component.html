@@ -4,7 +4,6 @@
       <h1>Your Cart</h1>
       <p class="cart-subtitle">Review items or continue shopping.</p>
     </div>
-    <a routerLink="/products" class="btn btn-secondary back-button">Browse Products</a>
   </div>
 
   <div *ngIf="loading" class="loading">
@@ -46,11 +45,11 @@
 
             <div class="item-actions">
               <div class="quantity-controls">
-                <button class="btn-qty" (click)="updateQuantity(item, -1)">−</button>
-                <span>{{ item.quantity }}</span>
-                <button class="btn-qty" (click)="updateQuantity(item, 1)">+</button>
+                <button class="btn btn-secondary btn-qty" (click)="updateQuantity(item, -1)">−</button>
+                <span class="quantity-input">{{ item.quantity }}</span>
+                <button class="btn btn-secondary btn-qty" (click)="updateQuantity(item, 1)">+</button>
               </div>
-              <button class="btn btn-secondary remove-button" (click)="removeItem(item.id)">
+              <button class="btn btn-secondary" (click)="removeItem(item.id)">
                 Remove
               </button>
             </div>
@@ -62,12 +61,15 @@
         <div class="summary-card">
           <h3>Order Summary</h3>
           <div class="summary-row">
-            <span>Items</span>
+            <span>Items: </span>
             <span>{{ cart.totalItems }}</span>
           </div>
           <div class="summary-row total">
-            <span>Subtotal</span>
+            <span>Total: </span>
             <span>${{ cart.totalPrice.toFixed(2) }}</span>
+          </div>
+          <div class="checkout-action">
+            <button type="button" routerLink="/checkout" class="btn btn-primary btn-large">Proceed to Checkout</button>
           </div>
         </div>
       </div>

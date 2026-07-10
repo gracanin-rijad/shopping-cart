@@ -1,0 +1,29 @@
+<div class="confirmation-container">
+  <div class="confirmation-header">
+    <h1>Order Confirmed</h1>
+    <p *ngIf="order">Thank you for your purchase, {{ order.customerName }}.</p>
+  </div>
+
+  <div *ngIf="loading" class="loading">
+    <p>Loading order details...</p>
+  </div>
+
+  <div *ngIf="error" class="error">
+    <p>{{ error }}</p>
+  </div>
+
+  <div *ngIf="order" class="order-details">
+    <p><strong>Order ID:</strong> {{ order.id }}</p>
+    <p><strong>Total:</strong> ${{ order.totalPrice.toFixed(2) }}</p>
+    <p><strong>Shipping to:</strong> {{ order.shippingAddress }}, {{ order.city }}</p>
+
+    <div class="items-list">
+      <h2>Order Items</h2>
+      <div *ngFor="let item of order.items" class="order-item">
+        <span>{{ item.productName }}</span>
+        <span>{{ item.quantity }} × ${{ item.price.toFixed(2) }}</span>
+      </div>
+    </div>
+  </div>
+
+</div>
