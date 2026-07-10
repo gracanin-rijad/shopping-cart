@@ -1,0 +1,49 @@
+.confirmation-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.08);
+}
+
+.confirmation-header {
+  margin-bottom: 20px;
+}
+
+.confirmation-header h1 {
+  margin: 0 0 0.5rem;
+}
+
+.confirmation-header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.order-details {
+  display: grid;
+  p {
+    margin: 5px 0;
+  }
+}
+
+.items-list {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.btn {
+  padding: 0.95rem 1.4rem;
+}

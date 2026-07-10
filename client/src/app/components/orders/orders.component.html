@@ -1,0 +1,33 @@
+<div class="orders-container">
+  <div class="orders-header">
+    <h1>My Orders</h1>
+    <p>Review all placed orders and view details.</p>
+  </div>
+
+  <div *ngIf="loading" class="orders-loading">Loading orders...</div>
+  <div *ngIf="error" class="orders-error">{{ error }}</div>
+
+  <div *ngIf="!loading && !error && orders.length === 0" class="orders-empty">
+    <p>No orders have been placed yet.</p>
+  </div>
+
+  <div *ngIf="orders.length > 0" class="orders-list">
+    <div *ngFor="let order of orders" class="order-card">
+      <div class="order-summary">
+        <div>
+          <h2>Order #{{ order.id }}</h2>
+          <p>{{ order.createdAt | date:'medium' }}</p>
+        </div>
+        <div class="order-total">${{ order.totalPrice.toFixed(2) }}</div>
+      </div>
+
+      <div class="order-details">
+        <p><strong>{{ order.customerName }}</strong></p>
+        <p>{{ order.shippingAddress }}, {{ order.city }}</p>
+        <p *ngIf="order.notes">Notes: {{ order.notes }}</p>
+      </div>
+
+      <button class="btn btn-secondary" (click)="viewOrder(order.id)">View details</button>
+    </div>
+  </div>
+</div>
