@@ -1,1 +1,18 @@
-<router-outlet></router-outlet>
+<header class="app-header">
+  <nav>
+    <a routerLink="/products" class="brand-link">
+      <img src="/images/shopping-online.png" alt="Shopping Cart logo" class="brand-logo" />
+      <span class="brand-text">Shopping cart</span>
+    </a>
+    <a routerLink="/products" routerLinkActive="active">Products</a>
+    <a routerLink="/cart" routerLinkActive="active" class="cart-link">
+      Cart
+      <span class="cart-badge" *ngIf="(cartCount$ | async) as count">{{ count }}</span>
+      <span class="cart-total" *ngIf="(cartTotal$ | async) as total">${{ total.toFixed(2) }}</span>
+    </a>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

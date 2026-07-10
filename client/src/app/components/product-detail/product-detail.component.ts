@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -17,9 +18,13 @@ export class ProductDetailComponent implements OnInit {
   loading = true;
   error: string | null = null;
   quantity = 1;
+  toastMessage: string | null = null;
+  isToastVisible = false;
+  private toastTimeoutId: number | null = null;
 
   constructor(
     private productService: ProductService,
+    private cartService: CartService,
     private route: ActivatedRoute,
     private cdr: ChangeDetectorRef
   ) {}
@@ -59,8 +64,36 @@ export class ProductDetailComponent implements OnInit {
     }
   }
 
+  private showToast(message: string): void {
+    this.toastMessage = message;
+    this.isToastVisible = true;
+    this.cdr.detectChanges();
+
+    if (this.toastTimeoutId !== null) {
+      window.clearTimeout(this.toastTimeoutId);
+    }
+
+    this.toastTimeoutId = window.setTimeout(() => {
+      this.isToastVisible = false;
+      this.toastMessage = null;
+      this.cdr.detectChanges();
+    }, 3000);
+  }
+
   addToCart(): void {
-    console.log(`Added ${this.quantity} of product ${this.product?.id} to cart`);
-    // TODO: Implement actual add to cart functionality
+    if (!this.product) {
+      return;
+    }
+
+    this.cartService.addItem(this.product.id, this.quantity).subscribe({
+      next: () => {
+        this.showToast(`${this.quantity} item${this.quantity > 1 ? 's' : ''} added to cart.`);
+      },
+      error: (err) => {
+        this.error = 'Unable to add item to cart. Please try again.';
+        console.error('Error adding item to cart:', err);
+        this.cdr.detectChanges();
+      }
+    });
   }
 }
