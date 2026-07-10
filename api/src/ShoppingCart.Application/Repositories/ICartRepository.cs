@@ -10,4 +10,5 @@ public interface ICartRepository
     Task<CartItem> AddAsync(CartItem item);
     Task<CartItem> UpdateAsync(CartItem item);
     Task<bool> DeleteAsync(int itemId);
+    Task ClearAsync();
 }

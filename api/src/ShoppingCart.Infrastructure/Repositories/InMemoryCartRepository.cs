@@ -53,4 +53,14 @@ public class InMemoryCartRepository : ICartRepository
         await dbContext.SaveChangesAsync();
         return item;
     }
+
+    public async Task ClearAsync()
+    {
+        var items = await dbContext.Set<CartItem>().ToListAsync();
+        if (items.Any())
+        {
+            dbContext.Set<CartItem>().RemoveRange(items);
+            await dbContext.SaveChangesAsync();
+        }
+    }
 }

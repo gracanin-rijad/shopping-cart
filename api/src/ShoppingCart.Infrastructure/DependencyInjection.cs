@@ -14,6 +14,7 @@ public static class DependencyInjection
             options.UseInMemoryDatabase("ShoppingCartDb"));
 
         services.AddScoped<ICartRepository, InMemoryCartRepository>();
+        services.AddScoped<IOrderRepository, InMemoryOrderRepository>();
 
         return services;
     }
