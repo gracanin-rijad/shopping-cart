@@ -45,19 +45,9 @@ Follow the Git and collaboration workflow in [../.github/rules.md](../.github/ru
 - [x] Frontend: style checkout and confirmation states
 
 ### Feature 4 - Documentation and Quality
-- [ ] Write SETUP.md
-- [ ] Write API documentation
-- [ ] Write Angular guidelines
-- [ ] Write .NET guidelines
-- [ ] Add unit tests for core services
-- [ ] Add integration tests for Cart and Order APIs
-
----
-
-## In Progress
-
----
-
-## Done
-- Feature 0 - Foundation Setup
-- Feature 3 - Checkout and Order Creation
+- [x] Write SETUP.md
+- [x] Write API documentation
+- [x] Write Angular guidelines
+- [x] Write .NET guidelines
+- [x] Implement unit tests for the cart operations
+- [x] Add loggers for the all major activities

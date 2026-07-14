@@ -6,6 +6,9 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Explicitly enable console logging
+builder.Logging.AddConsole();
+
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
